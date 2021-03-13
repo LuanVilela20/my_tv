@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  attraction_name: MyString
+  description: MyString
+  transmission_date: 2021-03-12 22:26:43
+  kind: one
+  channel: one
+  medium: one
+
+two:
+  attraction_name: MyString
+  description: MyString
+  transmission_date: 2021-03-12 22:26:43
+  kind: two
+  channel: two
+  medium: two
