@@ -18,15 +18,15 @@ Sistema que registra e lista as programações ordenadas pela data/hora de trans
 [https://github.com/LuanVilela20/Front_end_My_TV.git]
 
 * Caso queira fazer requisições GET sem o Front-end:
-http://localhost:3000/attractions lista todos ou adicionar /id para uma busca unica
-http://localhost:3000/kinds lista todos ou adicionar /id para uma busca unica
-http://localhost:3000/media lista todos ou adicionar /id para uma busca unica
-http://localhost:3000/channels lista todos ou adicionar /id para uma busca unica
+- http://localhost:3000/attractions lista todos ou adicionar /id para uma busca unica;
+- http://localhost:3000/kinds lista todos ou adicionar /id para uma busca unica;
+- http://localhost:3000/media lista todos ou adicionar /id para uma busca unica;
+- http://localhost:3000/channels lista todos ou adicionar /id para uma busca unica;
 
 * Caso queira fazer requisições POST sem o Front-end, segue o modelo do JSON:
     Obs: Os campos kind_id, medium_id e channel_id são obrigatorios! 
 
-Attractions
+- Attractions
 { 
     attraction_name: "teste",
     channel_id: "1",
@@ -34,22 +34,22 @@ Attractions
     kind_id: "4",
     medium_id: "1",
     transmission_date: "2021-03-06T09:44"
-}
+};
 
-Kinds
+- Kinds
 {
    description: "teste" 
-}
+};
 
-Media
+- Media
 {
    description: "teste" 
-}
+};
 
-Channels
+- Channels
 {
    description: "teste" 
-}
+};
 
 
  
