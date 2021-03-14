@@ -3,9 +3,9 @@ class KindsController < ApplicationController
 
   # GET /kinds
   def index
-    @kinds = Kind.all
+    @kinds = Kind.order(:description)
 
-    render json: @kinds
+    render json:  @kinds
     
   end
 
@@ -42,7 +42,7 @@ class KindsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_kind
-      @kind = Kind.find(params[:id])
+      @kind = Kind.find(params[:id]).order(params[:description])
     end
 
     # Only allow a list of trusted parameters through.

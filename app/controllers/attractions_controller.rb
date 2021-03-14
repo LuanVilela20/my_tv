@@ -3,9 +3,14 @@ class AttractionsController < ApplicationController
 
   # GET /attractions
   def index
-    @attractions = Attraction.all
+   
+    @attractions = Attraction.joins(:kind, :medium, :channel)
+    .select("attractions.attraction_name, attractions.description as desc_att, attractions.transmission_date, 
+             kinds.description as desc_kind, media.description as desc_media, channels.description as desc_channel")
+             .order(:transmission_date)
 
-    render json: @attractions
+    render json: @attractions #, methods: :date_transmition
+    #include: :kind(only: [:description])
   end
 
   # GET /attractions/1
@@ -41,7 +46,10 @@ class AttractionsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_attraction
-      @attraction = Attraction.find(params[:id])
+      @attraction = Attraction.joins(:kind, :medium, :channel)
+      .select("attractions.attraction_name, attractions.description as desc_att, attractions.transmission_date, 
+               kinds.description as desc_kind, media.description as desc_media, channels.description as desc_channel")
+               .order(:transmission_date).find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

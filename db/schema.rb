@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_12_222643) do
+ActiveRecord::Schema.define(version: 2021_03_13_184047) do
 
   create_table "attractions", force: :cascade do |t|
     t.string "attraction_name"
     t.string "description"
     t.datetime "transmission_date"
     t.integer "kind_id", null: false
-    t.integer "channel_id", null: false
+    t.integer "channel_id"
     t.integer "medium_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
