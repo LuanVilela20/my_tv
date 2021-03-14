@@ -54,4 +54,14 @@ namespace :dev do
     p "Registered Channel!"
   end  
 
+  task sem_channel: :environment do 
+    p "Inserting Sem canal..."
+
+    Channel.create!(
+      description: 'Sem canal!'
+    )
+
+    p "Registered Sem canal!"
+  end 
+
 end
